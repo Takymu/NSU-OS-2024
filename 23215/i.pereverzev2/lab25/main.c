@@ -31,7 +31,7 @@ int main()
         close(fildes[0]);
         char buf[MAXLENGTH];
         ssize_t readed = 0;
-        while((readed = read(fildes[1], buf, MAXLENGTH - 1)) > 0) {
+        while((readed = read(fildes[1], buf, MAXLENGTH)) > 0) {
             for(int i = 0; i < readed; i++) {
                 buf[i] = toupper(buf[i]);
                 printf("%c", buf[i]);
